@@ -172,8 +172,7 @@ class HIBC:
 
         # verify Barcode as valid
         if not self.__verify(hibc):
-            raise ValueError("Not a valid Barcode [{}]. Missing flag at beginning"
-                             " of Barcode: +".format(hibc))
+            raise ValueError("Not a valid Barcode [{}].".format(hibc))
 
         # Verify Barcode's primary and secondary match
         if not self.__verify_concat_hibc(hibc, hibc[-1:]):
